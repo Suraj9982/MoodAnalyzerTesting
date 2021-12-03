@@ -26,9 +26,10 @@ namespace MoodAnalyzer
                     return "HAPPY";
                 }
             }
-            catch(Exception)
+            catch
             {
-                return "HAPPY";
+                throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.ENTERED_NULL,"Message ssshould not be null");
+                throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.ENTERED_EMPTY, "Message ssshould not be empty");
             }
         }
     }
