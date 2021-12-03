@@ -26,7 +26,7 @@ namespace MoodAnalyzer
                     return "HAPPY";
                 }
             }
-            catch
+            catch(Exception)
             {
                 return "HAPPY";
             }
