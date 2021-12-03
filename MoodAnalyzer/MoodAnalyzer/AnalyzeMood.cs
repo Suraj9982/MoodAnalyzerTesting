@@ -19,7 +19,7 @@ namespace MoodAnalyzer
             {
                 if (this.message == null)
                 {
-                    throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.ENTERED_NULL, "message should not be null");
+                    throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.ENTERED_NULL, "mood should not be null");
                 }
                 if (message.Contains("Sad"))
                 {
@@ -32,7 +32,7 @@ namespace MoodAnalyzer
             }
             catch (MoodAnalysisException)
             {
-                throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.ENTERED_NULL, "message should not be null");
+                throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.ENTERED_NULL, "mood should not be null");
             }
         }
     }
