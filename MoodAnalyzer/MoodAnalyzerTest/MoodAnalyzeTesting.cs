@@ -27,24 +27,19 @@ namespace MoodAnalyzerTest
             Assert.AreEqual(result, "HAPPY");
         }
         [Test]
-        public void GivenNullMessage_WhenAnalyze_ShouldReturnHappy() 
-        {
-            string message = null;
-            AnalyzeMood mood = new AnalyzeMood(message);
-            string result = mood.MoodAnalyzer();
-            Assert.AreEqual(result, "HAPPY");
-        }
         public void GivenNullMessage_WhenAnalyze_ShouldReturnInvalidMoodException()
         {
             try
             {
+                string expected = "mood should not be null";
                 string message = null;
                 AnalyzeMood mood = new AnalyzeMood(message);
                 string result = mood.MoodAnalyzer();
+                Assert.AreEqual(expected, result);
             }
-            catch(MoodAnalysisException e)
-            {
-                Assert.AreEqual("mood should not be null", e.Message);
+            catch(MoodAnalysisException e) 
+            { 
+                Assert.AreEqual("mood should not be null",e.Message);
             }
         }
     }
