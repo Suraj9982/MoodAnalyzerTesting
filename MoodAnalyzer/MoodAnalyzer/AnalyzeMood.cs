@@ -4,7 +4,16 @@ namespace MoodAnalyzer
 {
     public class AnalyzeMood
     {
-        public string MoodAnalyzer(string message)
+        string message;
+        public AnalyzeMood()
+        {
+
+        }
+        public AnalyzeMood(string message)
+        {
+            this.message = message;
+        }
+        public string MoodAnalyzer()
         {
             if (message.Contains("Sad"))
             {
